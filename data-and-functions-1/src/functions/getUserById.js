@@ -1,4 +1,8 @@
 const getUserById = (data, id) => {
+
+  // im modifying my getUserById function by adding comments
+  // lets see what happens
+
   let user
 
   if (id == null || data == null || data.users == null) {
