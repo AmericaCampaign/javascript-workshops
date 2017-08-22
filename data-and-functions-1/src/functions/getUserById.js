@@ -5,7 +5,7 @@ const getUserById = (DATA, id) => {
 
   let user
 
-  DATA.users.forEach((u) => {
+  DATA.users.forEach((u, id) => {
     if (u.id === id) {
       user = u
     }
