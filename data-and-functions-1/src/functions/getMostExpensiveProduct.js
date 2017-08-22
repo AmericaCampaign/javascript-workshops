@@ -1,6 +1,9 @@
 import DATA from '../DATA'
 
-const getMostExpensiveProduct = () => {
+const getMostExpensiveProduct = (DATA) => {
+  if (DATA == null || DATA.products == null) {
+    return null
+  }
   let mostExpProd // = undefined
 
   for (let i = 0; i < DATA.products.length; i++) {
@@ -13,3 +16,5 @@ const getMostExpensiveProduct = () => {
 }
 
 export default getMostExpensiveProduct
+
+// passes

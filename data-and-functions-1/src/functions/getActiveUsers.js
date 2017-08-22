@@ -1,6 +1,10 @@
 import DATA from '../DATA'
 
-const getActiveUsers = () => {
+const getActiveUsers = (DATA) => {
+  if (DATA == null || DATA.users == null) {
+    return null
+  }
+
   let activeUsers = []
 
   DATA.users.forEach((user) => {
@@ -13,3 +17,5 @@ const getActiveUsers = () => {
 }
 
 export default getActiveUsers
+
+// passes

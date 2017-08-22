@@ -1,6 +1,6 @@
 import DATA from '../DATA'
 
-const getUsersById = (DATA, id) => {
+const getUserById = (DATA, id) => {
   if (DATA == null || DATA.users == null || id == null) {
     return null
   }
@@ -16,4 +16,6 @@ const getUsersById = (DATA, id) => {
   }
   return foundUser
 }
-export default getUsersById
+export default getUserById
+
+//  passes
