@@ -10,7 +10,7 @@ const getPriceById = (DATA, id) => {
 }
 
 const getTotalPriceForOrder = (DATA, id) => {
-  if (DATA == null || DATA.orders == null || id == null) {
+  if (DATA == null || DATA.orders == null) {
     throw new Error('no data, orders, or id is null')
   }
   const priceForOrderArray = []

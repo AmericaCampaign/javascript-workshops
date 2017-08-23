@@ -1,34 +1,20 @@
-let product
-const getProductsById = (DATA, id) => {
-  DATA.products.forEach((p) => {
-    if (p.id === id) {
-      product = p
-    }
-  })
-  return product
-}
+import getProductsById from './getProductsById'
 
 const getProductsForOrder = (DATA, id) => {
   if (DATA == null || DATA.orders == null || id == null) {
     throw new Error('no data, no order, or no id')
   }
-
   const productsForOrderArray = []
   DATA.orders.forEach((currentOrder) => {
+    if (currentOrder === undefined) {
+      return null
+    }
     if (currentOrder.id === id) {
       currentOrder.products.forEach((currentProduct) => {
-        productsForOrderArray.push({
-          id: currentProduct,
-          product: getProductsById(currentProduct),
-          price: currentProduct.price
-        })
+        productsForOrderArray.push(getProductsById(DATA, currentProduct))
       })
     }
   })
-  if (productsForOrderArray.length === 0) {
-    return null
-  } else {
-    return productsForOrderArray
-  }
+  return productsForOrderArray
 }
 export default getProductsForOrder
