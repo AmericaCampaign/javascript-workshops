@@ -14,6 +14,6 @@ const getProductsForOrder = (DATA, id) => {
     productsForOrderArray.push(getProductsById(DATA, currentProduct))
   })
   return productsForOrderArray
-  }
+}
 
 export default getProductsForOrder

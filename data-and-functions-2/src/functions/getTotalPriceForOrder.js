@@ -10,25 +10,18 @@ const getPriceById = (DATA, id) => {
 }
 
 const getTotalPriceForOrder = (DATA, id) => {
-  if (DATA == null || DATA.orders == null) {
-    throw new Error('no data, orders, or id is null')
+  if (DATA == null || DATA.orders == null || id == null) {
+    throw new Error('Error')
   }
-  const priceForOrderArray = []
-  DATA.orders.forEach((currentOrder) => {
-    if (currentOrder.id === id) {
-      currentOrder.products.forEach((currentProduct) => {
-        priceForOrderArray.push({
-          id: currentProduct,
-          price: getPriceById(currentProduct)
-        })
-      })
-    }
-  })
-  if (priceForOrderArray.length === 0) {
+  const order = DATA.orders.find((currentOrder) => currentOrder.id === id)
+  if (!order) {
     return null
-  } else {
-    return priceForOrderArray
   }
+  let totalPrice = 0
+  order.products.forEach((currentProduct) => {
+    totalPrice += getPriceById(DATA, currentProduct)
+  })
+  return totalPrice
 }
 
 export default getTotalPriceForOrder
