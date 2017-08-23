@@ -4,7 +4,7 @@ const getProductById = (DATA, id) => {
   }
   let product
   DATA.products.forEach((p) => {
-    if (product.id === id) {
+    if (p.id === id) {
       product = p
     }
   })
