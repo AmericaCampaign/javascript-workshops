@@ -5,16 +5,15 @@ const getProductsForOrder = (DATA, id) => {
     throw new Error('no data, no order, or no id')
   }
   const productsForOrderArray = []
-  DATA.orders.forEach((currentOrder) => {
-    if (currentOrder === undefined) {
-      return null
-    }
-    if (currentOrder.id === id) {
-      currentOrder.products.forEach((currentProduct) => {
-        productsForOrderArray.push(getProductsById(DATA, currentProduct))
-      })
-    }
+  const order = DATA.orders.find(o => o.id === id)
+
+  if (!order) {
+    return null
+  }
+  order.products.forEach((currentProduct) => {
+    productsForOrderArray.push(getProductsById(DATA, currentProduct))
   })
   return productsForOrderArray
-}
+  }
+
 export default getProductsForOrder
