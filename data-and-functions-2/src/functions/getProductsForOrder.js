@@ -6,9 +6,6 @@ const getProductsForOrder = (DATA, id) => {
   }
   const productsForOrderArray = []
   DATA.orders.forEach((currentOrder) => {
-    if (currentOrder === undefined) {
-      return null
-    }
     if (currentOrder.id === id) {
       currentOrder.products.forEach((currentProduct) => {
         productsForOrderArray.push(getProductsById(DATA, currentProduct))
