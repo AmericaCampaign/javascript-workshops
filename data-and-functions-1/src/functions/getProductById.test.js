@@ -20,7 +20,7 @@ describe('getProductById', () => {
       price: 30
     })
 
-    expect(getProductById(DATA, 1)).toMatchObject({
+    expect(getProductById(DATA, 4)).toMatchObject({
       id: 4,
       name: 'Iron Chef Greatest Hits',
       price: 60
