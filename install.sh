@@ -5,7 +5,7 @@ if ! git config remote.upstream.url > /dev/null; then
 fi
 
 DIR=`dirname "$0"`
-cd ${DIR}/data-and-functions-1 && npm install
-cd ../data-and-functions-2 && npm install
-cd ../data-and-functions-3 && npm install
+cd ${DIR}/data-and-functions-1 && yarn install
+cd ../data-and-functions-2 && yarn install
+cd ../data-and-functions-3 && yarn install
 cd ..

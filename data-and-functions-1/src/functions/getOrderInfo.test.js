@@ -13,7 +13,7 @@ describe('getOrderInfo', () => {
 
   it('returns 10 items', () => expect(getOrderInfo(DATA)).toHaveLength(10))
 
-  it('returns objects in the array', () => getOrderInfo(DATA).forEach(u => expect(typeof u).toBe('object')))
+  it('returns objects in the array', () => getOrderInfo(DATA).forEach(oi => expect(typeof oi).toBe('object')))
 
   it(
     'returns objects that have the correct keys',
