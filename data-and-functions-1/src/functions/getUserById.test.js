@@ -20,7 +20,7 @@ describe('getUserById', () => {
       accountActive: true
     })
 
-    expect(getUserById(DATA, 1)).toMatchObject({
+    expect(getUserById(DATA, 4)).toMatchObject({
       id: 4,
       name: 'Cleetus',
       accountActive: false
