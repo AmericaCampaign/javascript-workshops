@@ -5,9 +5,9 @@ import getMostExpensiveProduct from './getMostExpensiveProduct'
 describe('getMostExpensiveProduct', () => {
   it('is a function', () => expect(typeof getMostExpensiveProduct).toBe('function'))
 
-  it('returns null with no data', () => expect(getMostExpensiveProduct(null)).toBeNull())
+  it('returns null with null or undefined data', () => expect(getMostExpensiveProduct(null)).toBeNull())
 
-  it('returns null with undefined products', () => expect(getMostExpensiveProduct({})).toBeNull())
+  it('returns null with null or undefined data.products', () => expect(getMostExpensiveProduct({})).toBeNull())
 
   it('returns an object', () => expect(typeof getMostExpensiveProduct(DATA)).toBe('object'))
 

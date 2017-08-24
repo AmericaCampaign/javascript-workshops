@@ -5,9 +5,9 @@ import getOrderInfo from './getOrderInfo'
 describe('getOrderInfo', () => {
   it('is a function', () => expect(typeof getOrderInfo).toBe('function'))
 
-  it('returns null with no data', () => expect(getOrderInfo(null)).toBeNull())
+  it('returns null with null or undefined data', () => expect(getOrderInfo(null)).toBeNull())
 
-  it('returns null with undefined orders', () => expect(getOrderInfo({})).toBeNull())
+  it('returns null with null or undefined data.orders', () => expect(getOrderInfo({})).toBeNull())
 
   it('returns an array', () => expect(getOrderInfo(DATA)).toBeInstanceOf(Array))
 
