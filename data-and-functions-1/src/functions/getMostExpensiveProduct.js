@@ -14,3 +14,11 @@ const getMostExpensiveProduct = (DATA) => {
 }
 
 export default getMostExpensiveProduct
+
+// return data.products.reduce((mostExpensive, p) => {
+//   if (p.price > mostExpensive.price) {
+//     return p
+//   } else {
+//     return mostExpensive
+//   }
+// })
