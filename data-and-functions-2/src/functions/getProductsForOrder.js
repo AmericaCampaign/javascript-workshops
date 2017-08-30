@@ -2,7 +2,7 @@ import DATA from '../DATA'
 
 const getProductsForOrder = (DATA, id) => {
   if (DATA == null || DATA.products == null || id == null) {
-    throw new Error(('something is a little hairy here...'))
+    throw new Error(('something is a little hairy here in getProductsForOrder...'))
   }
 
   let foundOrder

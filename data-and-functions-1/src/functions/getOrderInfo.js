@@ -25,3 +25,5 @@ const getOrderInfo = (DATA) => {
 }
 
 export default getOrderInfo
+
+// passes
